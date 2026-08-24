@@ -10,6 +10,6 @@ class Toko(Base):
     updated_at=Column(DateTime,server_default=func.now(),onupdate=func.now())
     deleted_at=Column(DateTime,nullable=True,index=True) # this is soft delete column
     nama_toko=Column(String(255),nullable=False)
-    url_foto=Column(String(255),nullable=False)
+    url_foto=Column(String(255),nullable=True)
     user_id=Column(Integer,ForeignKey("user.id"))
     user=relationship("User")

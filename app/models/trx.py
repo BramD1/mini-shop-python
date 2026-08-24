@@ -14,6 +14,6 @@ class Trx(Base):
     harga_total=Column(Integer,nullable=False)
     kode_invoice=Column(String(255),nullable=False)
     metode_bayar=Column(String(255),nullable=False)
-    detail_trx=relationship("DetailTrx")
+    detail_trx=relationship("DetailTrx", back_populates="trx")
     user=relationship("User")
     alamat_kirim=relationship("Alamat")

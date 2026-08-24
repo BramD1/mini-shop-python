@@ -16,4 +16,4 @@ class DetailTrx(Base):
     harga_total=Column(Integer,nullable=False)
     log_produk=relationship("LogProduk")
     toko=relationship("Toko")
-    trx=relationship("Trx")
+    trx = relationship("Trx", back_populates="detail_trx")
